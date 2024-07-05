@@ -14,15 +14,24 @@ public class House {
 	ArrayList<Dog> puppies = new ArrayList<Dog>();
 	
 	
+	
+	
 	// 집 이름을 설정하는 함수
 	public House(String name) {
 		this.name = name;
 	}
 	
-	// 강아지 변수상자를 제어하는 메서드
-	public void set(Dog dog) {
-		puppies.add(dog);
+	// 강아지 변수상자를 다른 클래스로 보내는 메서드
+	public ArrayList<Dog> getPuppies() {
+		return puppies;
 	}
+	
+
+	// 강아지 변수상자에 강아지를 입력하는 메서드
+	public void setplace(Dog dog) {
+		getPuppies().add(dog);
+	}
+	
 	
 	
 	/// 강아지 변수상자의 정보를 가져오는 메서드
@@ -42,7 +51,7 @@ public class House {
 	// 모든 강아지의 이름을 가져오는 메서드
 	public String getFullName() {
 		String listOfNames = "";
-		for (int i=0; i<=(getSize() - 1); i++) {
+		for (int i=0; i<=(puppies.size() - 1); i++) {
 			listOfNames += puppies.get(i).getDogName() + ", ";
 		}
 		return listOfNames;
