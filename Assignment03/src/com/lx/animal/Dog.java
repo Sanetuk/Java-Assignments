@@ -12,11 +12,26 @@ public class Dog {
 	String number;
 	
 	// Constructor(강아지의 정보를 저장)
-	public Dog(String name, int age, String number) {
+	//public Dog(String name, int age, String number) {
+	//	this.name = name;
+	//	this.age = age;
+	//	this.number = number;
+	//}
+	
+	
+	//  강아지의 정보를 저장
+	public void setDogName(String name) {
 		this.name = name;
-		this.age = age;
-		this.number = number;
 	}
+	
+	public void setDogAge(int age) {
+		this.age = age;
+	}
+	
+	public void setDogNumber(String number) {
+		 this.number = number;
+	}
+	
 	
 	// 강아지의 이름을 불러오는 메서드
 	public String getDogName() {
